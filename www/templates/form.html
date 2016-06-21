@@ -1,0 +1,33 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title">Login</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeLogin()">Close</button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+    <form ng-submit="doLogin()">
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label">Title</span>
+          <input type="text" ng-model="event.title">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Start date</span>
+          <data-date-picker ng-model="event.startDate" placeholder="When do we rage?" />
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Start time</span>
+          <data-time-picker ng-model="event.startTime" placeholder="What time do we rage?" default-time-picker="28800" />
+        </label>
+        <label class="item">
+          <button class="button button-block button-positive" type="submit">Sign me up</button>
+        </label>
+      </div>
+    </form>
+
+
+    <hr />
+    <pre>{{event | json}}</pre>
+  </ion-content>
+</ion-modal-view>
